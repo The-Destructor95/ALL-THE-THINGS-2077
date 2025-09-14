@@ -1,0 +1,721 @@
+{
+    "common_descriptions": {
+        "acquired_autofixer": {
+            "en": "Can be acquired from the AUTOFIXER netpage for",
+            "trad": "Peut être obtenu sur la page Internet d'AUTOFIXER pour un montant de"
+        },
+        "optional_mission": {
+            "en": "Optional mission reward:",
+            "trad": "Récompense de mission facultative:"
+        },
+        "mission_reward": {
+            "en": "Mission Reward:",
+            "trad": "Récompense de mission:"
+        },
+        "dependent_mission_reward": {
+            "en": "Dependent Mission Reward:",
+            "trad": "Récompense pour mission dépendante:"
+        },
+        "nomad": {
+            "en": "ONLY NOMAD",
+            "trad": "SEULEMENT NOMAD"
+        },
+        "non_wraith": {
+            "en": "A non-Wraith version can be acquired from the AUTOFIXER netpage for",
+            "trad": "Une version non Wraith peut être obtenu sur la page Internet d'AUTOFIXER pour un montant de"
+        },
+        "Free": {
+            "en": "FREE",
+            "trad": "GRATUIT"
+        },
+         "Reward": {
+            "en": "Reward",
+            "trad": "Recompense"
+        },
+        "just_another_story": {
+            "en": "after completing Just Another Story 7 times.",
+            "trad": "après avoir terminé Just Another Story 7 fois."
+        },
+        "Street_Cred": {
+            "en": "after reaching 48 Street Cred.",
+            "trad": "après avoir atteint 48 Street Cred."
+        },
+        "Tanishi_T400": {
+            "en": "Given for free by Mr. Hands after first accessing Dogtown.",
+            "trad": "Offert gratuitement par M. Hands après le premier accès à Dogtown."
+        },
+         "Quartz_Bandit": {
+            "en": "The BandCan be obtained by two different ways depending on the choices made during Ghost Town. \n\n\ttIf V agrees with Panam to go after Nash: \n\t\tCan be acquired from the AUTOFIXER netpage for $69,000. \n\n\tIf V decides not to go after Nash: \n\t\tIt is obtained for free after receiving a message from Rogue Amendiares, who thanks V for their professionalism.",
+            "trad": "Le Bandit peut être obtenu de deux façons différentes, selon les choix faits pendant Ghost Town. \n\n\tSi V se met d'accord avec Panam pour poursuivre Nash : \n\t\tPeut être obtenu sur la page Internet d'AUTOFIXER pour un montant de 69 000 $. \n\n\tSi V décide de ne pas poursuivre Nash: \n\tIl s'obtient gratuitement après avoir reçu un message de Rogue Amendiares, qui remercie V pour son professionnalisme."
+        },
+        "nazaré_itsumade": {
+            "addionalen": "One Itsumade is rewarded at the end of The Highwayman. The bike is found in a garage in Northside, Watson; right next to the All Foods Plant. Putting the code '0214' in the keypad will give you access to the garage and the bike.",
+            "addionaltrad": "Une Itsumade est récompensée à la fin de The Highwayman. La moto se trouve dans un garage à Northside, Watson; juste à côté de l'usine All Foods. En entrant le code '0214' dans le clavier vous accéderez au garage et à la moto."
+        },
+        "Jackies_Tuned_Arch": {
+            "addionalen": "There are two cosmetic variants of Jackie's ARCH, but only one can be obtained per playthrough. If V has the Corpo or Streetkid lifepaths,they can only obtain the standard version{but a Nomad V can potentially obtain a variant called 'Jackie's Tuned ARCH' — when V meets with Jackie outside the All Foods Plant during The Pickup, there is a Nomad-specific dialogue option available in which V can talk to Jackie about his motorcycle.",
+            "addionaltrad": "Il existe deux variantes cosmétiques de l'ARCH de Jackie, mais il n'est possible d'en obtenir qu'une seule par partie. Si V a le profil Corpo ou Streetkid, il ne peut obtenir que la version standard, mais un V Nomade peut potentiellement obtenir une variante appelée 'Jackie's Tuned ARCH' lorsque V rencontre Jackie à l'extérieur de l'usine All Foods pendant le ramassage, il y a une option de dialogue spécifique aux Nomades dans laquelle V peut parler à Jackie de sa moto."
+        },
+        "malina_mobile": {
+            "addionalen": "During the BD shoot, one must pick the option to tell Malina to convince Tool that she is his sister. After a few days, Lina Malina will send you a message that you can pick it up in front of the Brainporium.",
+            "addionaltrad": "Pendant le tournage de la BD, il faut choisir l'option de dire à Malina de convaincre Tool qu'elle est sa soeur. Après quelques jours, Lina Malina vous enverra un message vous indiquant que vous pouvez la récupérer devant le Brainporium."
+        },
+        "apollo_scorpion": {
+            "addionalen": "The Scorpion is rewarded at the end of Life During Wartime, regardless if you drove the bikes or not.",
+            "addionaltrad": "Le Scorpion est récompensé à la fin de Life During Wartime, que vous ayez conduit les motos ou non."
+        },
+        "Type_66_Hoon": {
+            "addionalen": "In a Northside warehouse in the northeastern part of Watson, Johnny Silverhand will appear near a Quadra Type-66 'Hoon', a weaponized vehicle. Behind this car is a metal shelf that has collapsed, covering a small container. The key to the Quadra is inside this container.",
+            "addionaltrad": "Dans un entrepôt de Northside, au nord-est de Watson, Johnny Silverhand apparaîtra près d'un Quadra Type-66 'Hoon', un véhicule armé. Derrière ce véhicule se trouve une étagère métallique qui s'est effondrée, recouvrant un petit conteneur. La clé du Quadra se trouve à l'intérieur de ce conteneur."
+        },
+        "Sport_R_7_Charon": {
+            "addionalen": "'Stolen' from the EBM Petrochem Stadium underground parking garage.",
+            "addionaltrad": "'Volé' dans le parking souterrain du stade EBM Petrochem."
+        },
+        "Hella_Ec_D_I360": {
+            "addionalen": "V automatically has access to this car after starting Act 1. Once in Act 2, the quest 'Human Nature' will lead the player to get the car in Megabuilding H10's garage. After getting on it, a cab will wreck the Hella, starting the quest 'Tune Up'. After completing that quest and waiting for a few in-game days, Human Nature will automatically get completed and V will be able to use Hella once more.",
+            "addionaltrad": "V a automatiquement accès à cette voiture après avoir commencé l'Acte 1. Une fois dans l'Acte 2, la quête 'Human Nature' conduira le joueur à récupérer la voiture dans le garage du Mégabâtiment H10. Après être monté dessus, un taxi détruira la Hella, ce qui déclenchera la quête 'Tune Up'. Après avoir terminé cette quête et attendu quelques jours dans le jeu, Human Nature sera automatiquement terminée et V pourra à nouveau utiliser la Hella."
+        },
+        "Sport_R_7_sterling": {
+            "addionalen": "It is rewarded at the end of Hi Ho Silver Lining. \nAfter completing all of Mr. Hands's gigs in Pacifica and Dogtown, V is asked to return to Heavy Hearts Club for a reward. After talking with Mr. Hands outside the club, V will be rewarded with the Quadra Sport R-7 'Sterling'.",
+            "addionaltrad": "Il est récompensé à la fin de Hi Ho Silver Lining. \nAprès avoir terminé tous les contrats de Mr. Hands à Pacifica et Dogtown, V est invité à retourner au Heavy Hearts Club pour une récompense. Après avoir parlé à M. Hands à l'extérieur du club, V sera récompensé par la Quadra Sport R-7 'Sterling'."
+        },
+        "Sport_R_7_vigilante": {
+            "addionalen": "Those that pre-ordered the Cyberpunk 2077: Phantom Liberty expansion can acquire the vehicle for free after having completed The Heist main quest",
+            "addionaltrad": "Ceux qui ont précommandé l'extension Cyberpunk 2077 : Phantom Liberty peuvent acquérir le véhicule gratuitement après avoir terminé la quête principale The Heist."
+        },
+        "Caliburn_Murkmobile": {
+            "addionalen": "After completing Ghost Town and reaching 40 Street Cred, an undiscovered quest will appear some time after on your map, in the same tunnels where Nash's Raffen Shiv hideout was. The quest starts automatically once you visit the location, where you come across an odd sight: among the darkness and crags of the unfinished tunnel, in an old shipping container, is a jet black Rayfield Caliburn 'Murkmobile', along with several containers and amenities that imply someone set up shop here or at least intended to do so. A quick search in a nearby container reveals the story.",
+            "addionaltrad": "Après avoir terminé Ghost Town et atteint 40 Street Cred, une quête non découverte apparaîtra quelque temps après sur votre carte, dans les mêmes tunnels où se trouvait la cachette du Raffen Shiv de Nash. La quête démarre automatiquement une fois que vous avez visité l'endroit, où vous tombez sur un spectacle étrange : dans l'obscurité et les rochers du tunnel inachevé, dans un vieux conteneur d'expédition, se trouve une « Murkmobile » Rayfield Caliburn noir de jais, ainsi que plusieurs conteneurs et équipements qui indiquent que quelqu'un s'est installé ici, ou du moins en avait l'intention. Une recherche rapide dans un conteneur voisin permet de découvrir l'histoire."
+        },
+        
+        "Galena_Rattler": {
+            "addionalen": "These Boots Are Made for Walkin' is a Side Job in Cyberpunk 2077. It is only available to players who chose the Nomad Lifepath, and features V regaining their car from the prologue.",
+            "addionaltrad": "These Boots Are Made for Walkin' est une quete secondaire dans Cyberpunk 2077. Il n'est disponible que pour les joueurs qui ont choisi le chemin de vie Nomade, et permet à V de récupérer sa voiture dans le prologue."
+        },
+        "Colby_Cx_410_Gran_Butte_GREEN": {
+            "addionalen": "Patch 2.0 - No longer appears on the map, but will start when near to the vehicle. The quest automatically initiates as you approach the Desert Film Set, located at Jeff's Dirt Track to the east-northeast of Rocky Ridge town in the region of the same name in the Badlands.",
+            "addionaltrad": "Patch 2.0 - N'apparaît plus sur la carte, mais démarre à proximité du véhicule. La quête démarre automatiquement lorsque vous vous approchez du plateau de tournage du désert, situé à Jeff's Dirt Track à l'est-nord-est de la ville de Rocky Ridge dans la région du même nom dans les Badlands."
+        },
+        "Mackinaw_Beast": {
+            "addionalen": "Beast is rewarded at the end of 'The Beast In Me' if you follow Peter Sampson outside of the race.",
+            "addionaltrad": "Beast est récompensée à la fin de « The Beast In Me » si vous suivez Peter Sampson en dehors de la course."
+        },
+        "Mackinaw_Saguaro": {
+            "addionalen": "The Saguaro is rewarded at the end of Every Grain of Sand, a quest accessible after completing all gigs for Dakota Smith.",
+            "addionaltrad": "Le Saguaro est récompensé à la fin de Every Grain of Sand, une quête accessible après avoir terminé tous les contrats pour Dakota Smith."
+        },
+        "Mackinaw_Demiurge": {
+            "addionalen": "Given to V by Polyhistor after solving the FF:06:B5 mystery.",
+            "addionaltrad": "Remis à V par Polyhistor après avoir résolu le mystère de FF:06:B5."
+        },
+       
+        "Delamain_No.21": {
+            "addionalen": "Delamain No. 21 is rewarded at the end of 'Don't Lose Your Mind', no matter which decision you make.",
+            "addionaltrad": "Delamain No. 21 est récompensé à la fin de 'Don't Lose Your Mind', quelle que soit la décision que vous prenez."
+        },
+        "Alvarado_Vato": {
+            "addionalen": "In lieu of betting money, Ruiz will stake his ride, the Villefort Alvarado 'Vato'. In turn, you'll need to stake $20,000. When Ruiz is defeated, he will concede the money and car as promised, but you have a few options:Take both the car and the money Take the car, but leave Ruiz the money Take the money, but leave Ruiz the car Decline both the money and car",
+            "addionaltrad": "Au lieu de parier de l'argent, Ruiz misera sa monture, Villefort Alvarado 'Vato'.De votre côté, vous devrez miser 20 000 dollars.Lorsque Ruiz sera vaincu, il concédera l'argent et la voiture comme promis, mais vous avez plusieurs options : prendre la voiture et l'argent prendre la voiture, mais laisser l'argent à Ruiz prendre l'argent, mais laisser la voiture à Ruiz refuser l'argent et la voiture."
+        },
+        "Deleon_Vindicator": {
+            "addionalen": "Note that Just Another Story will not be available until you have completed the first night in Dogtown (Act 1 of the Phantom Liberty DLC).",
+            "addionaltrad": "Notez que Just Another Story ne sera pas disponible tant que vous n'aurez pas terminé la première nuit à Dogtown (Acte 1 du DLC Phantom Liberty)."
+        },
+        
+        "Turbo_R": {
+            "addionalen": "It is rewarded at the end of Sex On Wheels, a quest which is accessible after completing Gig: Life's Work.",
+            "addionaltrad": "Il est récompensé à la fin de Sex On Wheels, une quête accessible après avoir terminé Gig : Life's Work."
+        },
+        "Type_66_Cthulhu": {
+            "addionalen": "The Cthulhu can be obtained by two different ways depending on the choices made during The Beast In Me quest chain. \n\nIf V finishes the race or if Sampson is killed after V chases him:\n\tAfter a few days, Muamar Reyes will send V a message saying he is selling the car. It then {acquired_autofixer} $67,000.\n\nIf Sampson survives after V chases him: \n\tIt is obtained for free after receiving a message from Sampson a few days later. Sampson thanks V for convincing Claire to spare his life. See 'The Beast in Me' below for more details.",
+            "addionaltrad": "Le Cthulhu peut être obtenu de deux manières différentes, en fonction des choix effectués au cours de la chaîne de quêtes Beast In Me. \n\nSi V termine la course ou si Sampson est tué après que V l'ait poursuivi : \n\tAprès quelques jours, Muamar Reyes enverra à V un message indiquant qu'il vend la voiture. Elle peut alors être achetée sur la page Internet d'AUTOFIXER pour 67 000 $.\n\nSi Sampson survit après que V l'ait poursuivi : \n\tLa voiture est obtenue gratuitement après avoir reçu un message de Sampson quelques jours plus tard. Sampson remercie V d'avoir convaincu Claire d'épargner sa vie."
+        },
+        "911_Turbo_Cabriolet_930": {
+            "addionalen": "Rewarded upon completion. Quest is initiated by purchasing the vehicle through the AUTOFIXER netpage.",
+            "addionaltrad": "Récompensé à l'issue de la quête. La quête est initiée par l'achat du véhicule sur la page Internet d'AUTOFIXER."
+        },
+        "911_Turbo_930": {
+            "addionalen": "The 911 Turbo can be obtained during the Chippin' In quest, right after the fight against Jeremiah Grayson. You can either spare him so he gives you the keys to the car, or take them from his body if you decide to kill him. Afterwards, go to the ladder on the starboard of the ship and activate the button you'll find up there. One of the containers will be lifted down. Just go there, open the container doors and take the car.",
+            "addionaltrad": "La 911 Turbo peut être obtenue pendant la quête Chippin' In, juste après le combat contre Jeremiah Grayson. Vous pouvez soit l'épargner pour qu'il vous donne les clés de la voiture, soit les prendre sur son corps si vous décidez de le tuer. Ensuite, allez à l'échelle à tribord du navire et activez le bouton que vous trouverez là-haut. L'un des conteneurs sera soulevé. Allez-y, ouvrez les portes du conteneur et prenez la voiture."
+        },
+        "Shion_Bonewrecker": {
+            "addionalen": "A red and silver version can be obtained if V decided to rat Panam Palmer out to Saul Bright.",
+            "addionaltrad": "Une version rouge et argent peut être obtenue si V a décidé de dénoncer Panam Palmer à Saul Bright."
+        },
+        "Hellhound": {
+            "addionalen": "Unlike many vehicles added by Phantom Liberty, Can be purchased without needing to complete vehicle theft quests for Muamar Reyes.",
+            "addionaltrad": "Contrairement à de nombreux véhicules ajoutés par Phantom Liberty, Peut être acheté sans qu'il soit nécessaire d'accomplir les quêtes de vol de véhicules pour Muamar Reyes."
+        },
+        "Outlaw_Weiler": {
+            "addionalen": "Awarded to V by Muamar Reyes.",
+            "addionaltrad": "Décerné à V par Muamar Reye"
+        },
+        "Emperor_620_Ragnar": {
+            "addionalen": "Prior to the introduction of AUTOFIXER, Dino Dinovic sold the car via a text message.",
+            "addionaltrad": "Avant l'introduction d'AUTOFIXER, Dino Dinovic vendait la voiture par SMS."
+        },
+        "SEMIMARU_quest": {
+            "en": "Motorbreath",
+            "trad": "Motorbreath"
+        },
+        
+        "MURAMASA": {
+            "en": "Nitro (Youth Energy)",
+            "trad": "Nitro (Youth Energy)"
+        },
+        "CALIBURN_MORDRED_quest": {
+            "en": "Freedom",
+            "trad": "Freedom"
+        },
+        "CALIBURN_MORDRED":{
+            "addionalen": "Automatically obtained",
+            "addionaltrad": "Obtenue automatiquement"
+        },
+        "LEGATUS_450_AQUILA": {
+            "en": "Available for purchase on AUTOFIXER.",
+            "trad": "Disponible à l'achat sur AUTOFIXER."
+        }
+    },
+    "Vehicle.v_sport1_yaiba_semimaru_player":{
+    "en":"{dependent_mission_reward} {SEMIMARU_quest}",
+    "trad":"{dependent_mission_reward} {SEMIMARU_quest}",
+    "addionalen":"{CALIBURN_MORDRED}",
+    "addionaltrad":"{CALIBURN_MORDRED}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_naked":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_naked_as":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_naked_as_nr":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_naked_as_ns":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_naked_as_ns_nr":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_naked_nr":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_naked_ns":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_naked_ns_nr":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_regular":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_regular_as":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_regular_as_nr":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_regular_as_ns":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_regular_as_ns_nr":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_regular_nr":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_regular_ns":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sportbike1_yaiba_muramasa_regular_ns_nr":{
+    "en":"{dependent_mission_reward} {MURAMASA}",
+    "trad":"{dependent_mission_reward} {MURAMASA}"
+    },
+    "Vehicle.v_sport1_rayfield_caliburn_mordred_player":{
+    "en":"{dependent_mission_reward} {CALIBURN_MORDRED_quest}",
+    "trad":"{dependent_mission_reward} {CALIBURN_MORDRED_quest}",
+    "addionalen":"{CALIBURN_MORDRED}",
+    "addionaltrad":"{CALIBURN_MORDRED}"
+    },
+    "Vehicle.v_utility4_chevalier_legatus_player":{
+    "en":"{acquired_autofixer} $55,000",
+    "trad":"{acquired_autofixer} $55,000"
+    },
+
+    "Vehicle.v_sportbike2_arch_player":{
+        "en" :"{acquired_autofixer} $71,000.",
+        "trad" :"{acquired_autofixer} $71,000."
+    },
+    
+    "Vehicle.v_sportbike1_yaiba_kusanagi_player":{
+    "en" : "{acquired_autofixer} $66,000.",
+    "trad" :"{acquired_autofixer} $66,000."
+    },
+    
+    "Vehicle.v_sportbike2_arch_tyger_player":{
+    "en" : "{mission_reward} The Highwayman",
+    "trad" :"{mission_reward} The Highwayman",
+    "addionalen" : "{nazaré_itsumade}",
+    "addionaltrad" :"{nazaré_itsumade}"
+        },
+    
+    "Vehicle.v_sportbike2_arch_jackie_player":{
+    "en" : "{optional_mission} Heroes",
+    "trad" :"{optional_mission} Heroes"
+    },
+    
+    "Vehicle.v_sportbike2_arch_jackie_tuned_player":{
+    "en" :"{nomad}",
+    "trad" :"{nomad}",
+    "addionalen" : "{Jackies_Tuned_Arch}",
+    "addionaltrad" :"{Jackies_Tuned_Arch}"
+    },
+    
+                        "Vehicle.v_sportbike2_arch_linas_player":{
+                        "en" : "{dependent_mission_reward} Dazed and Confused",
+                        "trad" :"{dependent_mission_reward} Dazed and Confused",
+                        "addionalen" : "{malina_mobile}",
+                        "addionaltrad" :"{malina_mobile}"
+                    },
+    
+    "Vehicle.v_sportbike2_arch_player_03":{
+    "en" : "{acquired_autofixer} $68,000.",
+    "trad" :"{acquired_autofixer} $68,000."
+    },
+    
+    "Vehicle.v_sportbike2_arch_player_02":{
+    "en" : "{acquired_autofixer} $74,000.",
+    "trad" :"{acquired_autofixer} $74,000."
+    },
+    
+    "Vehicle.v_sportbike3_brennan_apollo_player":{
+    "en" : "{acquired_autofixer} $30,000.",
+    "trad" :"{acquired_autofixer} $30,000."
+    },
+    
+    "Vehicle.v_sportbike3_brennan_apollo_nomad_player":{
+    "en" : "{mission_reward} Life During Wartime",
+    "trad" :"{mission_reward} Life During Wartime",
+    "addionalen" : "{apollo_scorpion}",
+    "addionaltrad" :"{apollo_scorpion}"
+    },
+    
+    "Vehicle.v_sportbike3_brennan_apollo_player_02":{
+    "en" : "{acquired_autofixer} $36,000.",
+    "trad" :"{acquired_autofixer} $36,000."
+    },
+   
+    "Vehicle.v_sportbike1_yaiba_kusanagi_player_03":{
+    "en" : "{acquired_autofixer} $72,000.",
+    "trad" :"{acquired_autofixer} $72,000."
+    },
+    
+    "Vehicle.v_sportbike1_yaiba_kusanagi_player_02":{
+    "en" : "{acquired_autofixer} $76,000.",
+    "trad" :"{acquired_autofixer} $76,000."
+    },
+         "Vehicle.v_standard2_archer_quartz_base_player":{ 
+        "en": "{acquired_autofixer} $21,000.",
+        "trad" : "{acquired_autofixer} $21,000."
+    },
+        
+        "Vehicle.v_standard25_mahir_supron_gt_player":{
+        "en": "{acquired_autofixer} $26,000.",
+        "trad" : "{acquired_autofixer} $26,000."
+    },
+        "Vehicle.v_standard2_mizutani_hozuki_gt_player":{ 
+        "en": "{acquired_autofixer} $29,000.", 
+        "trad": "{acquired_autofixer} $29,000."
+    },
+        
+    "Vehicle.v_sport2_mizutani_shion_base_player":{ 
+    "en": "{acquired_autofixer} $43,000.", 
+    "trad" : "{acquired_autofixer} $43,000."
+    },
+       
+    "Vehicle.v_sport2_mizutani_shion_targa_player":{ 
+    "en" : "{acquired_autofixer} $61,000.", 
+    "trad" : "{acquired_autofixer} $61,000."
+    },
+       
+    "Vehicle.v_sport2_quadra_type66_gt_player":{ 
+    "en" : "{acquired_autofixer} $50,000.", 
+    "trad" : "{acquired_autofixer} $50,000." 
+    },
+       
+    "Vehicle.v_sport2_villefort_deleon_sport_player":{ 
+    "en" : "{acquired_autofixer} $33,000.", 
+    "trad" : "{acquired_autofixer} $33,000." 
+    },
+        
+    "Vehicle.v_standard2_thorton_colby_gt_player":{  
+    "en" : "{acquired_autofixer} $33,000.", 
+    "trad" : "{acquired_autofixer} $33,000." 
+    },
+        
+    "Vehicle.v_standard2_thorton_galena_nomad_player":{ 
+    "en" : "{acquired_autofixer} $45,000.", 
+    "trad" : "{acquired_autofixer} $45,000."
+    },
+       
+    "Vehicle.v_sport2_quadra_type66_nomad_tribute":{        
+    "en" : "{mission_reward} I'm in Love with My Car",
+    "trad" : "{mission_reward} I'm in Love with My Car",
+    "addionalen" :  "{Type_66_Hoon}", 
+    "addionaltrad" : "{Type_66_Hoon}"
+    },
+       
+                    "Vehicle.v_sport1_quadra_sport_r7_netrunner":{ 
+                    "en" : "{mission_reward} Moving Heat", 
+                    "trad" : "{mission_reward} Moving Heat",
+                    "addionalen" :  "{Sport_R_7_Charon}", 
+                    "addionaltrad" : "{Sport_R_7_Charon}"
+                    },
+        
+       "Vehicle.v_standard2_archer_hella_player":{ 
+        "en" : "{mission_reward} The Ripperdoc ", 
+        "trad" : "{mission_reward} The Ripperdoc ", 
+        "addionalen" :  "{Hella_Ec_D_I360}.",
+        "addionaltrad" : "{Hella_Ec_D_I360}"
+    },
+        
+       "Vehicle.v_standard2_archer_quartz_player":{ 
+        "en" : "{acquired_autofixer} $31,000.",
+        "trad" : "{acquired_autofixer} $31,000." 
+        },
+        
+       "Vehicle.v_standard2_archer_bandit_player":{ 
+        "en" : "{Quartz_Bandit}", 
+        "trad" : "{Quartz_Bandit}" 
+        },
+        
+       "Vehicle.v_standard2_archer_quartz_nomad_player":{ 
+        "en" : "{acquired_autofixer} $90,000.", 
+        "trad" : "{acquired_autofixer} $90,000." 
+        },
+        
+       "Vehicle.v_standard2_archer_quartz_nomad_player_02":{
+        "en" : "{non_wraith} $79,000.", 
+        "trad" : "{non_wraith} $79,000."
+        },
+        
+                           "Vehicle.v_sport1_quadra_sport_r7_mrhands":{ 
+                            "en" : "{mission_reward} Hi Ho Silver Lining", 
+                            "trad" : "{mission_reward} Hi Ho Silver Lining",
+                            "addionalen" :  "{Sport_R_7_sterling}", 
+                            "addionaltrad" : "{Sport_R_7_sterling}"
+                        },
+        
+                           "Vehicle.v_sport1_quadra_sport_r7_player":{ 
+                            "en" : "{acquired_autofixer} $81,000.", 
+                            "trad" : "{acquired_autofixer} $81,000."
+                            },
+        
+                           "Vehicle.v_sport1_quadra_sport_r7_player_02":{ 
+                            "en" : "{acquired_autofixer} $86,000.", 
+                            "trad" : "{acquired_autofixer} $86,000.",
+                            "addionalen" :  "{Sport_R_7_vigilante}", 
+                            "addionaltrad" : "{Sport_R_7_vigilante}"
+                        },
+        
+       "Vehicle.v_sport2_quadra_type66_nomad_player_03":{ 
+        "en" : "{acquired_autofixer} $99,000.", 
+        "trad" : "{acquired_autofixer} $99,000." 
+        },
+        
+       "Vehicle.v_sport1_rayfield_aerondight_player":{ 
+        "en" : "{acquired_autofixer} $155,000.", 
+        "trad" : "{acquired_autofixer} $155,000." 
+        },
+       
+       "Vehicle.v_sport1_rayfield_caliburn_player":{ 
+        "en" : "{acquired_autofixer} $135,000 at 50 Street Cred.", 
+        "trad" : "{acquired_autofixer} $135,000 en ayant 50 de Street Cred."
+        },
+        
+       "Vehicle.v_sport1_rayfield_caliburn_02_player":{ 
+        "en" : "{Free} (Easter Egg)", 
+        "trad" : "{Free} (Easter Egg)",
+        "addionalen" :  "{Caliburn_Murkmobile}", 
+        "addionaltrad" : "{Caliburn_Murkmobile}"
+    },
+        
+       "Vehicle.v_standard2_thorton_galena_player":{ 
+        "en" : "{acquired_autofixer} $26,000.", 
+        "trad" : "{acquired_autofixer} $26,000." 
+        },
+        
+       "Vehicle.v_standard2_thorton_colby_player":{ 
+        "en" : "{acquired_autofixer} $18,000.", 
+        "trad" : "{acquired_autofixer} $18,000."
+       },
+        
+       "Vehicle.v_standard2_thorton_galena_bobas_player":{ 
+        "en" : "{nomad}\n{optional_mission} These Boots Are Made for Walkin'", 
+        "trad" : "{nomad}\n{optional_mission} These Boots Are Made for Walkin'",
+        "addionalen" :  "{Galena_Rattler}", 
+        "addionaltrad" : "{Galena_Rattler}"
+    },
+        
+       "Vehicle.v_standard25_thorton_colby_nomad_player":{
+        "en" : "{acquired_autofixer} $41,000.", 
+        "trad" : "{acquired_autofixer} $41,000."
+    },
+        
+       "Vehicle.v_standard3_thorton_mackinaw_player":{
+        "en" : "{acquired_autofixer} $33,000.", 
+        "trad" : "{acquired_autofixer} $33,000."
+    },
+        
+       "Vehicle.v_standard25_thorton_colby_pickup_player":{
+        "en" : "{mission_reward} Dressed to Kill", 
+        "trad" : "{mission_reward} Dressed to Kill", 
+        "addionalen" :  "{Colby_Cx_410_Gran_Butte_GREEN}",
+        "addionaltrad" : "{Colby_Cx_410_Gran_Butte_GREEN}"
+    },
+        
+       "Vehicle.v_standard25_thorton_colby_nomad_player_missiles":{
+        "en" : "{non_wraith} $56,000.", 
+        "trad" : "{non_wraith} $56,000."
+    },
+        
+       "Vehicle.v_standard25_thorton_colby_pickup_02_player":{
+        "en" : "{acquired_autofixer} $25,000.", 
+        "trad" : "{acquired_autofixer} $25,000."
+    },
+        
+       "Vehicle.v_standard3_thorton_mackinaw_ncu_player":{
+        "en" : "{dependent_mission_reward} The Beast in Me", 
+        "trad" : "{dependent_mission_reward} The Beast in Me", 
+        "addionalen" :  "{Mackinaw_Beast}",
+        "addionaltrad" : "{Mackinaw_Beast}"
+    },
+        
+       "Vehicle.v_standard3_thorton_mackinaw_02_player":{
+        "en" : "{mission_reward} Every Grain of Sand", 
+        "trad" : "{mission_reward} Every Grain of Sand", 
+        "addionalen" :  "{Mackinaw_Saguaro}",
+        "addionaltrad" : "{Mackinaw_Saguaro}"
+    },
+        
+                           "Vehicle.v_standard25_thorton_colby_pickup_kurtz_player":{
+                            "en" : "{acquired_autofixer} $29,000.", 
+                            "trad" : "{acquired_autofixer} $29,000."
+                        },
+        
+       "Vehicle.v_standard2_thorton_galena_nomad_player_missiles":{
+        "en" : "{acquired_autofixer} $60,000.", 
+        "trad" : "{acquired_autofixer} $60,000."
+    },
+        
+                           "Vehicle.v_standard25_thorton_merrimac_player":{
+                            "en" : "{acquired_autofixer} $43,000.", 
+                            "trad" : "{acquired_autofixer} $43,000."
+                        },
+       
+       "Vehicle.v_utility4_thorton_mackinaw_bmf_player":{
+        "en" : "{Reward}", 
+        "trad" : "{Reward}",
+        "addionalen" :  "{Mackinaw_Demiurge}", 
+        "addionaltrad" : "{Mackinaw_Demiurge}"
+    },
+        
+       "Vehicle.v_standard25_villefort_columbus_player":{
+        "en" : "{acquired_autofixer} $19,000.", 
+        "trad" : "{acquired_autofixer} $19,000."
+        },
+        
+       "Vehicle.v_standard2_villefort_cortes_delamain_player":{
+        "en" : "{mission_reward} Don't Lose Your Mind", 
+        "trad" : "{mission_reward} Don't Lose Your Mind", 
+        "addionalen" :  "{Delamain_No.21}",
+        "addionaltrad" : "{Delamain_No.21}"
+    },
+        
+       "Vehicle.v_sport2_villefort_alvarado_valentinos_player":{
+        "en" : "{optional_mission} Beat on the Brat: The Glen", 
+        "trad" : "{optional_mission} Beat on the Brat: The Glen", 
+        "addionalen" :  "{Alvarado_Vato}",
+        "addionaltrad" : "{Alvarado_Vato}"
+    },
+        
+       "Vehicle.v_sport2_villefort_alvarado_player":{
+        "en" : "{acquired_autofixer} $38,000.", 
+        "trad" : "{acquired_autofixer} $38,000."
+    },
+        
+                           "Vehicle.v_sport2_villefort_alvarado_hearse_player":{
+                            "en" : "{acquired_autofixer} $39,000.", 
+                            "trad" : "{acquired_autofixer} $39,000."
+                        },
+       
+       "Vehicle.v_sport2_villefort_deleon_player":{
+        "en" : "{acquired_autofixer} $36,000 {just_another_story}", 
+        "trad" : "{acquired_autofixer} $36,000 {just_another_story}",
+        "addionalen" :  "{Deleon_Vindicator}", 
+        "addionaltrad" : "{Deleon_Vindicator}."
+    },
+        
+       "Vehicle.v_standard2_villefort_cortes_player":{
+        "en" : "{acquired_autofixer} $28,000.", 
+        "trad" : "{acquired_autofixer} $28,000."
+    },
+       
+       "Vehicle.v_sport2_quadra_type66_02_player":{
+        "en" : "{acquired_autofixer} $40,000.", 
+        "trad" : "{acquired_autofixer} $40,000."
+    },
+        
+       "Vehicle.v_sport2_quadra_type66_nomad_player":{
+        "en" : "{acquired_autofixer} $99,000.", 
+        "trad" : "{acquired_autofixer} $99,000."
+    },
+        
+       "Vehicle.v_sport2_quadra_type66_avenger_player":{
+        "en" : "{acquired_autofixer} $75,000 {Street_Cred}", 
+        "trad" : "{acquired_autofixer} $75,000 {Street_Cred}"
+    },
+        
+       "Vehicle.v_sport1_quadra_turbo_r_player ":{
+        "en" : "{mission_reward} Sex On Wheels", 
+        "trad" : "{mission_reward} Sex On Wheels",
+        "addionalen" :  "{Turbo_R}", 
+        "addionaltrad" : "{Turbo_R}"
+    },
+       
+       "Vehicle.v_sport2_quadra_type66_nomad_ncu_player":{
+        "en" : "{mission_reward} The Beast in Me", 
+        "trad" : "{mission_reward} The Beast in Me",
+        "addionalen" :  "{Type_66_Cthulhu}", 
+        "addionaltrad" : "{Type_66_Cthulhu}"
+    },
+       
+       "Vehicle.v_sport2_quadra_type66_player":{
+         "en" : "{acquired_autofixer} $52,000.", 
+        "trad" : "{acquired_autofixer} $52,000."
+    },
+       
+       "Vehicle.v_sport1_quadra_turbo_player":{
+        "en" : "{acquired_autofixer} $69,000.", 
+        "trad" : "{acquired_autofixer} $69,000."
+    },
+        
+       "Vehicle.v_sport2_porsche_911turbo_cabrio_player":{
+        "en" : "{mission_reward} Shape of a Pony", 
+        "trad" : "{mission_reward} Shape of a Pony", 
+        "addionalen" :  "{911_Turbo_Cabriolet_930}",
+        "addionaltrad" : "{911_Turbo_Cabriolet_930}"
+    },
+        
+       "Vehicle.v_sport2_porsche_911turbo_player":{
+        "en" : "{dependent_mission_reward} Chippin' In", 
+        "trad" : "{dependent_mission_reward} Chippin' In", 
+        "addionalen" :  "{911_Turbo_930}",
+        "addionaltrad" : "{911_Turbo_930}"
+    },
+        
+       "Vehicle.v_sport2_mizutani_shion_nomad_02_player":{
+        "en" : "{dependent_mission_reward} With a Little Help from My Friends", 
+        "trad" : "{dependent_mission_reward} With a Little Help from My Friends", 
+        "addionalen" :  "{Shion_Bonewrecker}",
+        "addionaltrad" : "{Shion_Bonewrecker}"
+    },
+        
+                           "Vehicle.v_sport2_mizutani_shion_nomad_player_missiles":{
+                            "en" : "{acquired_autofixer} $87,000.", 
+                            "trad" : "{acquired_autofixer} $87,000."
+                        },
+        
+                           "Vehicle.v_standard2_mizutani_hozuki_player":{
+                            "en" : "{acquired_autofixer} $37,000.", 
+                            "trad" : "{acquired_autofixer} $37,000."
+                        },
+        
+       "Vehicle.v_sport2_mizutani_shion_nomad_player":{
+        "en" : "{acquired_autofixer} $77,000.", 
+        "trad" : "{acquired_autofixer} $77,000."
+    },
+        
+       "Vehicle.v_sport2_mizutani_shion_player":{
+        "en" : "{acquired_autofixer} $57,000.", 
+        "trad" : "{acquired_autofixer} $57,000."
+    },
+       
+                           "Vehicle.v_standard3_militech_hellhound_player":{
+                            "en" : "{acquired_autofixer} $160,000.", 
+                            "trad" : "{acquired_autofixer} $160,000.",
+                            "addionalen" :  "{Hellhound}", 
+                            "addionaltrad" : "{Hellhound}"
+                        },
+        
+                           "Vehicle.v_standard3_makigai_tanishi_player":{
+                            "en" : "{acquired_autofixer} $35,000.", 
+                            "trad" : "{acquired_autofixer} $35,000."
+                        },
+        
+                           "Vehicle.v_standard3_makigai_tanishi_player_mr_hands":{
+                            "en" : "{mission_reward} {Tanishi_T400}", 
+                            "trad" : "{mission_reward} {Tanishi_T400}"
+                        },
+        
+       "Vehicle.v_standard2_makigai_maimai_player":{
+        "en" : "{acquired_autofixer} $22,000.", 
+        "trad" : "{acquired_autofixer} $22,000."
+    },
+        
+                           "Vehicle.v_standard3_mahir_supron_kurtz_player":{
+                            "en" : "{acquired_autofixer} $94,000.", 
+                            "trad" : "{acquired_autofixer} $94,000." 
+                            },
+        
+       "Vehicle.v_standard25_mahir_supron_player":{
+        "en" : "{acquired_autofixer} $16,000.", 
+        "trad" : "{acquired_autofixer} $16,000." 
+        },
+        
+                           "Vehicle.v_sport1_herrera_riptide_player":{
+                            "en" : "{acquired_autofixer} $108,000.", 
+                            "trad" : "{acquired_autofixer} $108,000." 
+                            },
+        
+       "Vehicle.v_sport1_herrera_outlaw_heist_player":{ 
+        "en" : "{mission_reward} Baby Let Me Take You", 
+        "trad" : "{mission_reward} Baby Let Me Take You",
+        "addionalen" :  "{Outlaw_Weiler}", 
+        "addionaltrad" : "{Outlaw_Weiler}"
+        },
+
+       "Vehicle.v_sport1_herrera_outlaw_player":{ 
+        "en" : "{acquired_autofixer} ", 
+        "trad" : "{acquired_autofixer} " 
+        },
+        
+       "Vehicle.v_standard3_chevalier_emperor_player":{ 
+        "en" : "{acquired_autofixer} $38,000.", 
+        "trad" : "{acquired_autofixer} $38,000.",
+        "addionalen" :  "{Emperor_620_Ragnar}", 
+        "addionaltrad" : "{Emperor_620_Ragnar}" 
+    },
+        
+       "Vehicle.v_standard2_chevalier_thrax_player":{ 
+        "en" : "{acquired_autofixer} $34,000.",
+        "trad" : "{acquired_autofixer} $34,000."
+        }
+}
+
