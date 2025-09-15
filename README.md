@@ -1,65 +1,124 @@
-# All The Things 2077
+<!--
+<h1 align="center">
+  <br>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
+  <br>
+  Markdownify
+  <br>
+</h1>
+ Ceci est un commentaire invisible quand le README est affiché sur GitHub 
 
-**All The Things 2077** est un mod pour **Cyberpunk 2077** inspiré de l’addon World of Warcraft **All The Things**.  
-L’objectif est simple : permettre aux joueurs de suivre **tous les objets collectionnables** du jeu (véhicules, armes, vêtements, cyberwares, quickhacks, mods & attachements, etc.) et de visualiser leur progression.
+<h4 align="center">A minimal Markdown Editor desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a>.</h4>
+
+<p align="center">
+  <a href="https://www.nexusmods.com/cyberpunk2077/mods/19300">
+    <img src="https://badge.fury.io/js/electron-markdownify.svg"
+         alt="Gitter">
+  </a>
+  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+  </a>
+  <a href="https://www.paypal.me/AmitMerchant">
+    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+  </a>
+</p>
+-->
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#download">Download</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
+
+![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+
+## Key Features
+
+* LivePreview - Make changes, See changes
+  - Instantly see what your Markdown documents look like in HTML as you create them.
+* Sync Scrolling
+  - While you type, LivePreview will automatically scroll to the current location you're editing.
+* GitHub Flavored Markdown  
+* Syntax highlighting
+* [KaTeX](https://khan.github.io/KaTeX/) Support
+* Dark/Light mode
+* Toolbar for basic Markdown formatting
+* Supports multiple cursors
+* Save the Markdown preview as PDF
+* Emoji support in preview :tada:
+* App will keep alive in tray for quick usage
+* Full screen mode
+  - Write distraction free.
+* Cross platform
+  - Windows, macOS and Linux ready.
+
+## How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/amitmerchant1990/electron-markdownify
+
+# Go into the repository
+$ cd electron-markdownify
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+```
+
+> **Note**
+> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+
+
+## Download
+
+You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
+
+## Emailware
+
+Markdownify is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <bullredeyes@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
+
+## Credits
+
+This software uses the following open source packages:
+
+- [Electron](http://electron.atom.io/)
+- [Node.js](https://nodejs.org/)
+- [Marked - a markdown parser](https://github.com/chjj/marked)
+- [showdown](http://showdownjs.github.io/showdown/)
+- [CodeMirror](http://codemirror.net/)
+- Emojis are taken from [here](https://github.com/arvida/emoji-cheat-sheet.com)
+- [highlight.js](https://highlightjs.org/)
+
+## Related
+
+[Try Web version of Markdownify](https://notepad.js.org/markdown-editor/)
+
+## Support
+
+If you like this project and think it has helped in any way, consider buying me a coffee!
+
+<a href="https://buymeacoffee.com/amitmerchant" target="_blank"><img src="app/img/bmc-button.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+## You may also like...
+
+- [Pomolectron](https://github.com/amitmerchant1990/pomolectron) - A pomodoro app
+- [Correo](https://github.com/amitmerchant1990/correo) - A menubar/taskbar Gmail App for Windows and macOS
+
+## License
+
+MIT
 
 ---
 
-## ✨ Fonctionnalités principales
+> [amitmerchant.com](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
+> GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
+> Twitter [@amit_merchant](https://twitter.com/amit_merchant)
 
-- 📊 **Progression globale** : affiche votre taux de complétion (objets collectés / total).
-- 🚗 **Véhicules** : suivi des voitures et motos, y compris Phantom Liberty et profils exclusifs (Nomad, Streetkid, Corpo).
-- 🔫 **Armes** : collection des armes standards et uniques.
-- 👕 **Vêtements** : mode Fashionpunk pour les collectionneurs.
-- 🦾 **Cyberwares** : suivi des implants et améliorations.
-- 💻 **Quickhacks** : liste et progression des hacks à obtenir.
-- ⚙️ **Mods & attachements** : tout ce que vous pouvez installer sur vos armes et équipements.
-- 🎯 **Divers** : autres objets collectionnables.
-- 🌍 **Profils exclusifs** : choisissez entre **Nomad**, **Streetkid** et **Corpo** pour voir les items spécifiques à votre origine.
-- 🌐 **Traductions dynamiques** via fichiers JSON (anglais, français et extensible).
-- 🖥️ **Interface ImGui personnalisée** avec plusieurs designs possibles.
-- 📦 **Système d’add-ons** : les joueurs pourront créer et partager des extensions pour ajouter du contenu ou des fonctionnalités.
-
----
-
-## 📂 Structure du projet
-
----
-
-## 🚀 Installation
-
-1. Téléchargez la dernière release depuis [la page GitHub Releases](./releases).
-2. Placez le dossier `AllTheThings2077` dans votre répertoire `Cyberpunk 2077/mods`.
-3. Lancez le jeu et ouvrez le menu **CET/ImGui** pour accéder à l’interface.
-
----
-
-## 🛠️ Développement & Contributions
-
-Vous pouvez contribuer de plusieurs façons :
-- 💡 Ajouter de nouveaux objets manquants.
-- 🌍 Améliorer ou traduire les descriptions.
-- 🎨 Créer des add-ons dans le dossier `addons/`.
-- 🐛 Corriger les bugs ou améliorer les performances du code.
-
-Pour contribuer :
-1. Forkez le projet.
-2. Créez une branche (`git checkout -b feature/ma-feature`).
-3. Faites vos modifications.
-4. Ouvrez une Pull Request.
-
----
-
-## 📜 Licence
-
-Projet communautaire, non officiel.  
-Cyberpunk 2077 est une marque déposée de CD Projekt Red.  
-**All The Things 2077** est un mod gratuit et open-source, inspiré de l’addon WoW **All The Things**.
-
----
-
-## 🙌 Remerciements
-
-- **CDPR** pour Cyberpunk 2077.
-- **L’addon WoW All The Things** qui a inspiré ce projet.
-- La communauté modding Cyberpunk pour ses outils et son support.
