@@ -1,0 +1,16 @@
+# Runtime
+*.log
+
+# User state — chaque utilisateur a sa propre progression
+# (settings.json contient selectedLanguage, currentProfile, hideOwnedItems, etc.)
+settings.json
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Backups éventuels
+*.bak
+*.tmp
