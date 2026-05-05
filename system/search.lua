@@ -163,21 +163,152 @@ end
 -----------------------------------------------------------
 -- Pretty-print des sous-catégories
 --
--- Les sous-cat internes (`crafting_components`, `handguns_quest_liberty`,
--- `AssaultRifles`, `main_liberty > kow`) sont techniques. Pour l'UI on
--- veut un nom lisible et un flag "DLC ?".
+-- Convertit les noms internes (snake_case, camelCase, ALLCAPS, paths
+-- nestés) en libellés lisibles, avec mappings spécifiques par catégorie
+-- ATT pour gérer les conventions de chaque module métier.
 --   "crafting_components"     -> "Crafting Components", DLC=false
 --   "handguns_quest_liberty"  -> "Handguns (Quest)",    DLC=true
---   "AssaultRifles"           -> "Assault Rifles",      DLC=false
---   "main_liberty > kow"      -> "Main > Kow",          DLC=true
+--   "facesCY"                 -> "Faces",               DLC=false  (cyberware: strip CY)
+--   "MUZZLEHANDGUNS"          -> "Muzzle / Handgun",    DLC=false  (mod: ALLCAPS lookup)
+--   "heads_kabuki"            -> "Watson / Kabuki / Heads"          (clothes: region/district/slot)
+--   "secondary > johnny"      -> "Side Jobs > Johnny"               (quest: rename "secondary")
 -----------------------------------------------------------
 
-local function prettifyCategoryName(sub)
+-- Mods : noms ALLCAPS hardcodés dans data/mods.lua
+local MOD_LABELS = {
+    ARSMGLMGMODS           = "Assault / SMG / LMG",
+    BLADEMODS              = "Blade",
+    BLUNTWEAPONMODS        = "Blunt Weapon",
+    MELEEWEAPONMODS        = "Melee Weapon",
+    MUZZLEASSAULTRIFLESMGS = "Muzzle / Assault Rifle & SMG",
+    MUZZLEHANDGUNS         = "Muzzle / Handgun",
+    PISTOLREVOLVERMODS     = "Pistol / Revolver",
+    POWERWEAPONMODS        = "Power Weapon",
+    SCOPEGENERICLONGS      = "Scope / Long",
+    SCOPEGENERICSHORTS     = "Scope / Short",
+    SCOPETECHSNIPERS       = "Scope / Tech Sniper",
+    SHOTGUNMODS            = "Shotgun",
+    SILENCERS              = "Silencer",
+    SMARTWEAPONMODS        = "Smart Weapon",
+    SNIPERPRECRIFLEMODS    = "Sniper / Precision Rifle",
+    TECHWEAPONMODS         = "Tech Weapon",
+    THROWABLEWEAPONMODS    = "Throwable",
+    WEAPONMODS             = "Weapon",
+}
+
+-- Cyberwares : suffixe "CY" de désambiguation à virer pour l'affichage
+local CYBERWARE_LABELS = {
+    facesCY = "Faces",
+    handsCY = "Hands",
+    legsCY  = "Legs",
+}
+
+-- Clothes : sub-district -> région CP2077 (fallback : juste le nom)
+local CLOTHES_REGIONS = {
+    northhside       = "Watson",
+    kabuki           = "Watson",
+    little_china     = "Watson",
+    Japantown        = "Watson",
+    Charter_Hill     = "Westbrook",
+    corpo_plaza      = "City Center",
+    Wellsprings      = "Heywood",
+    west_wind_estate = "Pacifica",
+    arroyo           = "Santo Domingo",
+    rancho_coronado  = "Santo Domingo",
+    red_peaks        = "Badlands",
+    -- vendors (pas de région parent)
+    david_walker = nil, satoshi_ueno = nil,
+    Karim_Noel   = nil, Zane_Jagger  = nil,
+}
+
+local CLOTHES_DISTRICT_LABELS = {
+    northhside       = "Northside",
+    kabuki           = "Kabuki",
+    little_china     = "Little China",
+    Japantown        = "Japantown",
+    Charter_Hill     = "Charter Hill",
+    corpo_plaza      = "Corpo Plaza",
+    Wellsprings      = "Wellsprings",
+    west_wind_estate = "West Wind Estate",
+    arroyo           = "Arroyo",
+    rancho_coronado  = "Rancho Coronado",
+    red_peaks        = "Red Peaks",
+    david_walker     = "David Walker",
+    satoshi_ueno     = "Satoshi Ueno",
+    Karim_Noel       = "Karim Noel",
+    Zane_Jagger      = "Zane Jagger",
+}
+
+local CLOTHES_SLOTS = {
+    heads        = "Heads",
+    faces        = "Faces",
+    feets        = "Feet",
+    innertorsos  = "Inner Torso",
+    outertorsos  = "Outer Torso",
+    legss        = "Legs",
+    Haeds        = "Heads",  -- typo dans la data
+}
+
+-- Quests : noms top-level que CDPR utilise officiellement
+local QUEST_LABELS = {
+    main      = "Main Jobs",
+    secondary = "Side Jobs",
+    side      = "Side Quests",
+    gig       = "Gigs",
+    prologue  = "Prologue",
+    act1      = "Act 1",
+    act2      = "Act 2",
+    act3      = "Act 3",
+    interlude = "Interlude",
+    epilogue  = "Epilogue",
+    root      = "Root",
+}
+
+local function titleCase(s)
+    return s:gsub("(%w)(%w*)", function(f, r) return f:upper() .. r:lower() end)
+end
+
+local function prettifyClothes(base)
+    -- Sets : *_set
+    if base:lower():find("_set$") then
+        local setName = base:gsub("_set$", ""):gsub("_", " ")
+        return "Sets / " .. titleCase(setName)
+    end
+    -- Pattern <slot>_<district> : on cherche le préfixe slot connu
+    for slotKey, slotLabel in pairs(CLOTHES_SLOTS) do
+        if base:find("^" .. slotKey .. "_") then
+            local district      = base:sub(#slotKey + 2)
+            local districtLabel = CLOTHES_DISTRICT_LABELS[district]
+                                  or titleCase(district:gsub("_", " "))
+            local region        = CLOTHES_REGIONS[district]
+            if region then
+                return region .. " / " .. districtLabel .. " / " .. slotLabel
+            else
+                return districtLabel .. " / " .. slotLabel
+            end
+        end
+    end
+    return nil  -- fallback générique
+end
+
+local function prettifyQuestPath(base)
+    local segments = {}
+    -- Découpe le path "main > prologue" / "main > act2 > evelyn" / "secondary > johnny"
+    for seg in (base .. " > "):gmatch("(.-) > ") do
+        if seg ~= "" then
+            segments[#segments + 1] = QUEST_LABELS[seg] or titleCase(seg:gsub("_", " "))
+        end
+    end
+    if #segments == 0 then return nil end
+    return table.concat(segments, " > ")
+end
+
+local function prettifyCategoryName(category, sub)
     if not sub or sub == "" then return "", false end
 
     local lo      = sub:lower()
     local isDLC   = lo:find("liberty", 1, true) ~= nil
-    local isQuest = lo:find("_quest", 1, true) ~= nil or lo:find("^quest$") ~= nil
+    local isQuest = lo:find("_quest", 1, true) ~= nil
 
     -- Strip les modificateurs pour obtenir la catégorie de base
     local base = sub
@@ -185,20 +316,29 @@ local function prettifyCategoryName(sub)
         :gsub("_quest", "")
         :gsub("_liberty", "")
 
-    -- snake_case -> espaces, camelCase -> espaces
-    base = base:gsub("(%l)(%u)", "%1 %2")
-    base = base:gsub("_", " ")
-    -- Title-case mot par mot (préserve "> " comme séparateur de path)
-    base = base:gsub("(%w)(%w*)", function(first, rest)
-        return first:upper() .. rest:lower()
-    end)
-    -- Compactage des espaces en trop
-    base = base:gsub("%s+", " "):gsub("^%s+", ""):gsub("%s+$", "")
-
-    if isQuest and base ~= "" then
-        base = base .. " (Quest)"
+    -- Mappings spécifiques par catégorie (priorité sur le générique)
+    local pretty
+    if category == "Mods" and MOD_LABELS[base] then
+        pretty = MOD_LABELS[base]
+    elseif category == "Cyberwares" and CYBERWARE_LABELS[base] then
+        pretty = CYBERWARE_LABELS[base]
+    elseif category == "Clothes" then
+        pretty = prettifyClothes(base)
+    elseif category == "Quests" then
+        pretty = prettifyQuestPath(base)
     end
-    return base, isDLC
+
+    -- Fallback générique : snake_case + camelCase + title-case
+    if not pretty then
+        pretty = base:gsub("(%l)(%u)", "%1 %2"):gsub("_", " ")
+        pretty = titleCase(pretty)
+        pretty = pretty:gsub("%s+", " "):gsub("^%s+", ""):gsub("%s+$", "")
+    end
+
+    if isQuest and pretty ~= "" then
+        pretty = pretty .. " (Quest)"
+    end
+    return pretty, isDLC
 end
 
 Search.PrettifyCategoryName = prettifyCategoryName  -- exposé pour debug console
@@ -217,7 +357,7 @@ function Search.GetResults(maxResults)
             local key = entry.category .. "|" .. entry.subcategory .. "|" .. lower(display)
             if not seen[key] then
                 seen[key] = true
-                local prettySub, isDLC = prettifyCategoryName(entry.subcategory)
+                local prettySub, isDLC = prettifyCategoryName(entry.category, entry.subcategory)
                 results[#results + 1] = {
                     display     = display,
                     category    = entry.category,
