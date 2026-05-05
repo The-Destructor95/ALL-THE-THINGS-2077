@@ -160,6 +160,49 @@ local function matchHaystack(entry, q)
            display
 end
 
+-----------------------------------------------------------
+-- Pretty-print des sous-catégories
+--
+-- Les sous-cat internes (`crafting_components`, `handguns_quest_liberty`,
+-- `AssaultRifles`, `main_liberty > kow`) sont techniques. Pour l'UI on
+-- veut un nom lisible et un flag "DLC ?".
+--   "crafting_components"     -> "Crafting Components", DLC=false
+--   "handguns_quest_liberty"  -> "Handguns (Quest)",    DLC=true
+--   "AssaultRifles"           -> "Assault Rifles",      DLC=false
+--   "main_liberty > kow"      -> "Main > Kow",          DLC=true
+-----------------------------------------------------------
+
+local function prettifyCategoryName(sub)
+    if not sub or sub == "" then return "", false end
+
+    local lo      = sub:lower()
+    local isDLC   = lo:find("liberty", 1, true) ~= nil
+    local isQuest = lo:find("_quest", 1, true) ~= nil or lo:find("^quest$") ~= nil
+
+    -- Strip les modificateurs pour obtenir la catégorie de base
+    local base = sub
+        :gsub("_quest_liberty", "")
+        :gsub("_quest", "")
+        :gsub("_liberty", "")
+
+    -- snake_case -> espaces, camelCase -> espaces
+    base = base:gsub("(%l)(%u)", "%1 %2")
+    base = base:gsub("_", " ")
+    -- Title-case mot par mot (préserve "> " comme séparateur de path)
+    base = base:gsub("(%w)(%w*)", function(first, rest)
+        return first:upper() .. rest:lower()
+    end)
+    -- Compactage des espaces en trop
+    base = base:gsub("%s+", " "):gsub("^%s+", ""):gsub("%s+$", "")
+
+    if isQuest and base ~= "" then
+        base = base .. " (Quest)"
+    end
+    return base, isDLC
+end
+
+Search.PrettifyCategoryName = prettifyCategoryName  -- exposé pour debug console
+
 function Search.GetResults(maxResults)
     maxResults = maxResults or 100
     local q = lower(Search.query)
@@ -174,10 +217,13 @@ function Search.GetResults(maxResults)
             local key = entry.category .. "|" .. entry.subcategory .. "|" .. lower(display)
             if not seen[key] then
                 seen[key] = true
+                local prettySub, isDLC = prettifyCategoryName(entry.subcategory)
                 results[#results + 1] = {
                     display     = display,
                     category    = entry.category,
                     subcategory = entry.subcategory,
+                    prettySub   = prettySub,
+                    isDLC       = isDLC,
                     id          = entry.id,
                 }
                 if #results >= maxResults then break end
@@ -245,9 +291,19 @@ function Search.DrawResults()
     end
     ImGui.Separator()
     for _, r in ipairs(results) do
+        -- Préfixe orange "[DLC]" pour les items Phantom Liberty.
+        if r.isDLC then
+            ImGui.PushStyleColor(ImGuiCol.Text, 1.0, 0.75, 0.2, 1.0)
+            ImGui.Text("[DLC]")
+            ImGui.PopStyleColor()
+            ImGui.SameLine()
+        end
+        -- Crumb [Catégorie / Sous-catégorie] en bleu clair, prettifié.
         ImGui.PushStyleColor(ImGuiCol.Text, 0.55, 0.78, 1.0, 1.0)
         local crumb = "[" .. r.category
-        if r.subcategory ~= "" then crumb = crumb .. " / " .. r.subcategory end
+        if r.prettySub and r.prettySub ~= "" then
+            crumb = crumb .. " / " .. r.prettySub
+        end
         crumb = crumb .. "]"
         ImGui.Text(crumb)
         ImGui.PopStyleColor()
