@@ -1359,7 +1359,7 @@ for _, handgun in ipairs(weapons.handguns) do
     if not groupedWeapons.TwoHandedClubs[twohandedclubData.name] then
         groupedWeapons.TwoHandedClubs[twohandedclubData.name] = {
             recordIDs = {},
-            acquisititwon = acquisitionData.en,
+            acquisitionen = acquisitionData.en,
             acquisitionfr = acquisitionData.fr,
             vendoren = vendorData.en,
             vendorenfr = vendorData.fr,
@@ -1382,7 +1382,7 @@ for _, handgun in ipairs(weapons.handguns) do
     if not groupedWeapons.TwoHandedClubs_liberty[twohandedclubData_liberty.name] then
         groupedWeapons.TwoHandedClubs_liberty[twohandedclubData_liberty.name] = {
             recordIDs = {},
-            acquisititwon = acquisitionData.en,
+            acquisitionen = acquisitionData.en,
             acquisitionfr = acquisitionData.fr,
             vendoren = vendorData.en,
             vendorenfr = vendorData.fr,
@@ -1405,7 +1405,7 @@ for _, handgun in ipairs(weapons.handguns) do
     if not groupedWeapons.TwoHandedClubs_quest_liberty[twohandedclubData_quest_liberty.name] then
         groupedWeapons.TwoHandedClubs_quest_liberty[twohandedclubData_quest_liberty.name] = {
             recordIDs = {},
-            acquisititwon = acquisitionData.en,
+            acquisitionen = acquisitionData.en,
             acquisitionfr = acquisitionData.fr,
             vendoren = vendorData.en,
             vendorenfr = vendorData.fr,
@@ -1428,7 +1428,7 @@ for _, handgun in ipairs(weapons.handguns) do
     if not groupedWeapons.TwoHandedClubs_quest[twohandedclubData_quest.name] then
         groupedWeapons.TwoHandedClubs_quest[twohandedclubData_quest.name] = {
             recordIDs = {},
-            acquisititwon = acquisitionData.en,
+            acquisitionen = acquisitionData.en,
             acquisitionfr = acquisitionData.fr,
             vendoren = vendorData.en,
             vendorenfr = vendorData.fr,
