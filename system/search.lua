@@ -222,8 +222,13 @@ function Search.DrawBar(width)
     end
 end
 
+-- Plafond de l'affichage. Au-delà, ImGui devient lent à dessiner et le
+-- compteur de dédup tourne pour rien. Si tu cherches un terme générique
+-- qui dépasse, affine ta query — un message s'affiche dans ce cas.
+local DRAW_LIMIT = 1000
+
 function Search.DrawResults()
-    local results = Search.GetResults(200)
+    local results = Search.GetResults(DRAW_LIMIT)
     if #results == 0 then
         local msg = T("ATT_SEARCH_NO_RESULTS")
         ImGui.Text((msg ~= "ATT_SEARCH_NO_RESULTS") and msg or "No matching items")
@@ -231,7 +236,13 @@ function Search.DrawResults()
     end
     local label = T("ATT_SEARCH_RESULTS_LABEL")
     label = (label ~= "ATT_SEARCH_RESULTS_LABEL") and label or "results"
-    ImGui.Text(string.format("%d %s", #results, label))
+    if #results >= DRAW_LIMIT then
+        ImGui.PushStyleColor(ImGuiCol.Text, 1.0, 0.7, 0.3, 1.0)
+        ImGui.Text(string.format("%d+ %s (limit reached — refine your query)", #results, label))
+        ImGui.PopStyleColor()
+    else
+        ImGui.Text(string.format("%d %s", #results, label))
+    end
     ImGui.Separator()
     for _, r in ipairs(results) do
         ImGui.PushStyleColor(ImGuiCol.Text, 0.55, 0.78, 1.0, 1.0)
