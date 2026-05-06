@@ -1,5 +1,17 @@
 return {
   {
+    version = "2.5",
+    date = "2026 May 07",
+    changes = {
+      "Added a global search bar in the header to find any item across all categories",
+      "Search results show a clean category path (e.g. Clothes / Watson / Kabuki / Heads, Mods / Scope / Long) with a [DLC] tag in front of Phantom Liberty items",
+      "Quest titles are now resolved through the game's built-in localization — they automatically match your in-game language in 11 locales",
+      "Added 17 new language options in Settings > General (Arabic, Czech, German, Spanish, Italian, Japanese, Korean, Polish, Brazilian Portuguese, Russian, Thai, Turkish, Ukrainian, Simplified/Traditional Chinese, ...). Untranslated strings fall back to English automatically",
+      "Search result limit raised from 200 to 1000 (with a 'limit reached' hint when more results exist)",
+      "Bug fix - Two-Handed Clubs acquisition descriptions now display correctly when the language is set to English",
+    }
+  },
+  {
     version = "2.4.1",
     date = "2026 Apr 16",
     changes = {
