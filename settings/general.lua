@@ -18,33 +18,9 @@ end
 
 -- Available languages — add a new entry to expose more in the combo box.
 -- Each language code must match a key in M.interface (and ideally in M.descriptions).
---
--- NB : seuls "en" et "fr" ont actuellement des traductions dans
--- trad/translations.lua. Les autres langues sont déclarées pour que
--- l'utilisateur puisse les sélectionner ; toute string non traduite
--- retombera automatiquement sur l'anglais via le fallback de ATT.T()
--- (cf. init.lua:149-160). Ajouter la traduction dans trad/translations.lua
--- en suivant la convention `<code> = { ATT_KEY = "..." }`.
 general.languages = {
-    { code = "en",    label = "English (English)" },
-    { code = "fr",    label = "French (Français)" },
-    { code = "ar-ar", label = "Arabic (العربية)" },
-    { code = "cz-cz", label = "Czech (čeština)" },
-    { code = "de-de", label = "German (Deutsch)" },
-    { code = "es-es", label = "Spanish (Español)" },
-    { code = "es-mx", label = "Latin American Spanish (Español latinoamericano)" },
-    { code = "hu-hu", label = "Hungarian (Magyar)" },
-    { code = "it-it", label = "Italian (Italiano)" },
-    { code = "jp-jp", label = "Japanese (日本語)" },
-    { code = "kr-kr", label = "Korean (한국어)" },
-    { code = "pl-pl", label = "Polish (Polski)" },
-    { code = "pt-br", label = "Brazilian Portuguese (Português do Brasil)" },
-    { code = "ru-ru", label = "Russian (Русский)" },
-    { code = "th-th", label = "Thai (ไทย)" },
-    { code = "tr-tr", label = "Turkish (Türkçe)" },
-    { code = "ua-ua", label = "Ukrainian (Українська)" },
-    { code = "zh-cn", label = "Simplified Chinese (简体中文)" },
-    { code = "zh-tw", label = "Traditional Chinese (繁體中文)" },
+    { code = "en", label = "English"  },
+    { code = "fr", label = "Français" },
 }
 
 local function languageLabel(code)
