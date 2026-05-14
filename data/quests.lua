@@ -7,14 +7,14 @@
 local quests = {
     main = {
         prologue = {
-            {"q000_corpo",    "LocKey#9461", "Le corpo-rat"},
+            {"q000_corpo",    "LocKey#9461", "The Corpo-Rat"},
             {"q000_nomad",    "LocKey#9462", "The Nomads"},
             {"q000_streetkid", "LocKey#9463", "The Streetkid"},
         },
         act1 = {
-            {"q001_intro",    "LocKey#9466", "Le sauvetage"},
+            {"q001_intro",    "LocKey#9466", "The Rescue"},
             {"q000_tutorial",    "LocKey#36141", "Practice Makes Perfect"},
-            {"q001_01_victor",   "LocKey#9464", "Le charcudoc"},
+            {"q001_01_victor",   "LocKey#9464", "The Ripperdoc"},
             {"q001_02_dex",      "LocKey#9465", "Le rendez-vous"},
             {"q003_maelstrom",   "LocKey#9467", "La collecte"},
             {"q004_braindance",  "LocKey#9469", "Le renseignement"},
@@ -24,9 +24,6 @@ local quests = {
             {"q101_01_firestorm","LocKey#8508", "Love Like Fire"},
         },
         act2 = {
-            -- Quests that sit at the root of Act 2 (no character path).
-            -- Mirrors how `act3.nocturne` works: the button under "Acte 2"
-            -- shows everything in this list.
             root = {
                 {"q101_resurrection", "LocKey#8529", "Playing for Time"},
                 {"sq032_tapeworm", "LocKey#12429", "Tapeworm"},
@@ -89,94 +86,172 @@ local quests = {
     secondary = {
         johnny = {
             {"mq023_bootleg", "LocKey#10334", "The Ballad of Buck Ravers"},
+            {"sq031_rogue", "LocKey#10334", "Chippin' In"},
+            {"sq031_smack_my_bitch_up", "LocKey#10334", "A Cool Metal Fire"},
+            {"sq031_rogue", "LocKey#10334", "Blistering Love"},
+            {"sq011_kerry", "LocKey#10334", "Holdin' On"},
+            {"sq011_johnny", "LocKey#10334", "Second Conflict"},
         },
-        judy = {},
-        panam = {},
+        judy = {
+            {"sq026_01_suicide", "LocKey#10334", "Both Sides, Now"},
+            {"sq026_02_maiko", "LocKey#10334", "Ex-Factor"},
+            {"sq026_03_pizza", "LocKey#10334", "Talkin' 'bout a Revolution"},
+            {"sq026_04_hiromi", "LocKey#10334", "Pisces"},
+            {"sq030_judy_romance", "LocKey#10334", "Pyramid Song"},
+        },
+        panam = {
+            {"sq004_riders_on_the_storm", "LocKey#10334", "Riders on the Storm"},
+            {"sq027_01_baslisk_convoy", "LocKey#10334", "With a Little Help from My Friends"},
+            {"sq027_02_raffen_shiv_attack", "LocKey#10334", "Queen of the Highway"},
+        },
         river = {
-            {"mq010_barry", "LocKey#10098", "Happy Together"},
+            {"sq012_lost_girl", "LocKey#10098", "I Fought the Law"},
+            {"sq021_sick_dreams", "LocKey#10098", "The Hunt"},
+            {"sq029_sobchak_romance", "LocKey#10098", "Following the River"},
         },
-        kerry = {},
+        kerry = {
+            {"sq017_kerry", "LocKey#10334", "Rebel! Rebel!"},
+            {"sq017_01_riot_club", "LocKey#10334", "I Don't Wanna Hear It"},
+            {"sq017_02_lounge", "LocKey#10334", "Off the Leash (quest)"},
+            {"sq017_kerry", "LocKey#10334", "Rebel! Rebel!"},
+            {"sq028_kerry_romance", "LocKey#10334", "Boat Drinks"},
+        },
         lifepaths = {
-            {"mq041_corpo", "LocKey#10478", "War Pigs"},
+            {"mq042_nomad", "LocKey#10478", "These Boots Are Made for Walkin(nomad)"},
+            --a verifier fact streetkid 
+            {"mq017_streetkid", "LocKey#10478", "Small Man, Big Mouth(streetkid)"},
+            --a verifier fact streetkid 
+            {"mq041_corpo", "LocKey#10478", "War Pigs(corpo)"},
         },
-        aldecaldos = {},
+        aldecaldos = {
+            {"mq001_scorpion", "LocKey#10317", "I'll Fly Away"},
+            {"mq002_veterans", "LocKey#10321", "Gun Music"},
+            {"mq021_guide", "LocKey#10325", "Fortunate Son"},
+        },
         brendan = {
-            {"mq037_brendan", "LocKey#10475", "Coin Operated Boy"},
             {"mq037_brendan_dumpster", "LocKey#15806", "I Can See Clearly Now"},
-            {"mq037_brendan_hooligan001", "LocKey#27951", "Spray Paint"},
+            {"mq037_brendansq024_city_race_hooligan001", "LocKey#27951", "Spray Paint"},
+            {"mq037_brendan", "LocKey#10475", "Coin Operated Boy"},
         },
         claire = {
             {"07_nc_underground", "LocKey#9865", "The Beast In Me"},
+            {"sq024_city_race", "LocKey#9865", "The Beast In Me: City Center"},
+            {"sq024_badlands_race", "LocKey#9865", "The Beast In Me: Badlands"},
+            {"sq024_santo_domingo_race", "LocKey#9865", "The Beast In Me: Santo Domingo"},
+            {"sq024_the_big_race", "LocKey#9865", "The Beast In Me: The Big Race"},
+            --fact pas sur
+            {"mq056_race_replay", "LocKey#9865", "The Distance"},
         },
         coach_fred = {
+            {"mq025_psycho_brawl", "LocKey#19321", "Beat on the Brat"},
             {"mq025_02_kabuki", "LocKey#10358", "Beat on the Brat : Kabuki"},
             {"mq025_03_arroyo", "LocKey#10362", "Beat on the Brat : Arroyo"},
             {"mq025_05_glen", "LocKey#10366", "Beat on the Brat : le Glen"},
             {"mq025_06_pacifica", "LocKey#19331", "Beat on the Brat : Pacifica"},
             {"mq025_07_fight_club", "LocKey#10374", "Beat on the Brat : Rancho Coronado"},
-            {"mq025_psycho_brawl", "LocKey#19321", "Beat on the Brat"},
         },
-        delamain = {},
-        peralez = {},
-        joshua = {},
+        delamain = {
+            {"sq025_0_pickup", "LocKey#9865", "Human Nature"},
+            {"sq025_compensation", "LocKey#9865", "Tune Up"},
+            {"sq025_delamain", "LocKey#9865", "Epistrophy"},
+            {"sq025c01_angry", "LocKey#9865", "Epistrophy: Wellsprings"},
+            {"sq025c05_scared", "LocKey#9865", "Epistrophy: Northside"},
+            {"sq025c02_sad", "LocKey#9865", "Epistrophy: North Oak"},
+            {"sq025c04_maniac", "LocKey#9865", "Epistrophy: Rancho Coronado"},
+            {"sq025c06_mean", "LocKey#9865", "Epistrophy: Badlands"},
+            {"sq025c07_suicidal", "LocKey#9865", "Epistrophy: The Glen"},
+            {"sq025c03_mean", "LocKey#9865", "Epistrophy: Coastview"},
+            {"sq025b_delamain_insurgence", "LocKey#9865", "Don't Lose Your Mind"},
+        },
+        peralez = {
+            {"sq012_lost_girl", "LocKey#9865", "I Fought the Law"},
+            {"sq006_dream_on", "LocKey#9865", "Dream On"},
+        },
+        joshua = {
+            {"sq023_hit_order", "LocKey#9865", "Sinnerman"},
+            {"sq023_bd_passion", "LocKey#9865", "There Is A Light That Never Goes Out"},
+            {"sq023_real_passion", "LocKey#9865", "They Won't Go When I Go"},
+
+        },
         nix = {
             {"mq015_wizardbook", "LocKey#10224", "Spellbound"},
             {"mq016_bartmoss", "LocKey#10244", "KOLD MIRAGE"},
         },
         regina = {
             {"mq043_cyberpsychos", "LocKey#50645", "Psycho Killer"},
+            {"mq007_smartgun", "LocKey#50645", "Machine Gun"},
         },
         wilson = {
-            {"mq002_veterans", "LocKey#10025", "Gun Music"},
+            {"sq_q001_wilson", "LocKey#19199", "The Gun"},
             {"mq011_wilson", "LocKey#10108", "Shoot To Thrill"},
         },
         viktor = {
-            {"mq045_victor_debt", "LocKey#77679", "Rubis sur l'ongle"},
+            {"mq045_victor_debt", "LocKey#77679", "Paid in Full"},
             {"mq048_cyberware", "LocKey#86582", "Upgrade U"},
         },
         zen = {
+            {"mq014_zen", "LocKey#10203", "Imagine"},
             {"mq014_02_second", "LocKey#10208", "Stairway To Heaven"},
             {"mq014_03_third", "LocKey#10213", "Poem Of The Atoms"},
             {"mq014_04_fourth", "LocKey#10218", "Meetings Along The Edge"},
-            {"mq014_zen", "LocKey#10203", "Imagine"},
         },
         vehicles = {
-            {"mq044_jakes_vehicle", "LocKey#51750", "Conduite orgasmique"},
-            {"mq046_cave_vehicle", "LocKey#78507", "Dark Man : le défi"},
             {"mq047_ad_vehicle", "LocKey#78511", "Dressed to Kill"},
+            {"mq059_freedom", "LocKey#78511", "Freedom"},
             {"mq050_ken_block_tribute", "LocKey#92154", "I'm in Love with My Car"},
-            {"mq056_race_replay", "LocKey#95194", "The Distance"},
+            {"mq057_motorbreath", "LocKey#51750", "Motorbreath"},
+            {"mq046_cave_vehicle", "LocKey#51750", "Murk Man Returns Again Once More Forever"},
+            {"mq060_nitro", "LocKey#51750", "Nitro (Youth Energy)"},
+            {"mq044_jakes_vehicle", "LocKey#51750", "Sex On Wheels"},
+            {"mws_se5_07", "LocKey#51750", "Shape of a Pony"},
+            {"mq058_semimaru_crystalcoat", "LocKey#51750", "Where Eagles Dare"},
         },
         apartments = {
-            {"mq055_romance_apartment", "LocKey#95766", "I Really Want to Stay at Your House"},
+            {"dlc6_mb_renovation", "LocKey#95766", "Houses In Motion: Makeovers"},
+            {"dlc6_apart_cct_dtn", "LocKey#95766", "Welcome Home: Corpo Plaza"},
+            {"dlc6_apart_wbr_jpn", "LocKey#95766", "Welcome Home: Japantown"},
+            {"dlc6_apart_wat_nid", "LocKey#95766", "Welcome Home: Northside"},
+            {"dlc6_apart_hey_gle", "LocKey#95766", "Welcome Home: The Glen"},
         },
         misc = {
-            {"badlands_reward", "LocKey#79483", "Every Grain of Sand"},
-            {"city_center_reward", "LocKey#79480", "Gas Gas Gas"},
-            {"combat_zone_reward", "LocKey#81399", "Hi Ho Silver Lining"},
-            {"heywood_reward", "LocKey#79477", "God Bless This Mess"},
-            {"mq003_orbitals", "LocKey#10040", "Space Oddity"},
-            {"mq005_alley", "LocKey#10054", "Only Pain"},
-            {"mq008_party", "LocKey#10068", "Stadium Love"},
-            {"mq012_stud", "LocKey#10188", "Désir brûlant"},
-            {"mq013_punks", "LocKey#10197", "A Day In The Life"},
-            {"mq018_writer", "LocKey#10273", "Killing In The Name"},
-            {"mq019_paparazzi", "LocKey#10299", "Violence"},
-            {"mq021_guide", "LocKey#10319", "Fortunate Son"},
-            {"mq022_ezekiel", "LocKey#10330", "Ezekiel Saw the Wheel"},
-            {"mq024_sandra", "LocKey#10342", "Full Disclosure"},
-            {"mq028_stalker", "LocKey#10436", "Every Breath You Take"},
-            {"mq032_sacrum", "LocKey#10456", "Sacrum Profanum"},
-            {"mq033_tarot", "LocKey#10461", "Fool on the Hill"},
-            {"mq035_ozob", "LocKey#10473", "Send in the Clowns"},
-            {"mq036_overload", "LocKey#10474", "Sweet Dreams"},
-            {"mq038_neweridentity", "LocKey#10476", "Big in Japan"},
-            {"mq040_biosculpt", "LocKey#10477", "Raymond Chandler Evening"},
-            {"mq049_edgerunners", "LocKey#83940", "Une mise en garde"},
-            {"mq301_bomb", "LocKey#85277", "Balls to the Wall"},
-            {"santo_domingo_reward", "LocKey#79474", "Ride Captain Ride"},
-            {"watson_reward", "LocKey#79467", "Last Call"},
-            {"westbrook_reward", "LocKey#79471", "Professional Widow"},
+            {"mq013_punks", "LocKey#79483", "A Day In The Life"},
+            {"mq038_neweridentity", "LocKey#79483", "Big in Japan"},
+            --fact à vérifier
+            {"badlands_reward", "LocKey#79483", "Bullets"},
+
+            {"mq012_stud", "LocKey#79483", "Burning Desire / Night Moves"},
+            {"mws_wat_08_trauma_drama", "LocKey#79483", "Career Opportunities"},
+            {"mq028_stalker", "LocKey#79483", "Every Breath You Take"},
+            --fact à vérifier
+            {"badlands_reward", "LocKey#79483", "Ezekiel Saw the Wheel"},
+
+            {"mq033_tarot", "LocKey#79483", "Fool on the Hill"},
+            {"mq024_sandra", "LocKey#79483", "Full Disclosure"},
+            {"mq010_barry", "LocKey#79483", "Happy Together"},
+            {"sq018_jackie", "LocKey#79483", "Heroes"},
+            {"mq055_romance_apartment", "LocKey#79483", "I Really Want to Stay at Your House"},
+            {"mq018_writer", "LocKey#79483", "Killing In The Name"},
+            --fact à vérifier
+            {"badlands_reward", "LocKey#79483", "Love Rollercoaster"},
+            {"badlands_reward", "LocKey#79483", "Only Pain"},
+            {"badlands_reward", "LocKey#79483", "Over the Edge"},
+            
+            {"mq040_biosculpt", "LocKey#79483", "Raymond Chandler Evening"},
+            {"mq032_sacrum", "LocKey#79483", "Sacrum Profanum / Losing My Religion"},
+            {"mq035_ozob", "LocKey#79483", "Send in the Clowns"},
+            --fact à vérifier
+            {"badlands_reward", "LocKey#79483", "Space Oddity"},
+
+            {"mq008_party", "LocKey#79483", "Stadium Love"},
+            {"mq036_overload", "LocKey#79483", "Sweet Dreams"},
+            {"sq_q001_tbug", "LocKey#27794", "The Gift"},
+            {"sq_q001_wakako", "LocKey#12437", "The Gig"},
+            --fact à vérifier
+            {"badlands_reward", "LocKey#79483", "The Highwayman"},
+        
+            {"mq026_conspiracy", "LocKey#79483", "The Prophet's Song"},
+            {"q003_stout", "LocKey#79483", "Venus in Furs"},
+            {"mq019_paparazzi", "LocKey#79483", "Violence"},
         },
     },
     side = {
@@ -195,10 +270,8 @@ local quests = {
         {"sq023_hit_order", "LocKey#11946", "Sinnerman"},
         {"sq023_real_passion", "LocKey#11960", "They Won't Go When I Go"},
         {"sq024_badlands_race", "LocKey#11976", "The Beast in Me : Badlands"},
-        {"sq024_city_race", "LocKey#11990", "The Beast in Me : centre-ville"},
         {"sq024_santo_domingo_race", "LocKey#12005", "The Beast in Me : Santo Domingo"},
         {"sq024_the_big_race", "LocKey#12023", "The Beast in Me : La grande course"},
-        {"sq025_0_pickup", "LocKey#37512", "Human Nature"},
         {"sq025_compensation", "LocKey#12041", "Mise au point"},
         {"sq025_delamain", "LocKey#12049", "Epistrophy"},
         {"sq025b_delamain_insurgence", "LocKey#12061", "Don't Lose Your Mind"},
@@ -304,6 +377,25 @@ local quests = {
         {"sts_wbr_jpn_03", "LocKey#13100", "Contrat : Profanation d'un sanctuaire"},
         {"sts_wbr_jpn_05", "LocKey#13106", "Contrat : Le chouchou de Wakako"},
         {"sts_wbr_jpn_12", "LocKey#13114", "Contrat : La cupidité ne paye jamais"},
+
+        -- Entrées manquantes ajoutées avec placeholders (questID + LocKey à compléter)
+        -- Dakota Smith (Badlands) - reward
+        {"placeholder_every_grain_of_sand", "LocKey#0", "Contrat : Every Grain of Sand"},
+        -- Dino Dinovic (City Center) - reward
+        {"placeholder_gas_gas_gas",         "LocKey#0", "Contrat : Gas Gas Gas"},
+        -- Mr. Hands (base game)
+        {"placeholder_two_wrongs",          "LocKey#0", "Contrat : Two Wrongs Makes Us Right"},
+        -- Muamar Reyes - reward
+        {"placeholder_ride_captain_ride",   "LocKey#0", "Contrat : Ride Captain Ride"},
+        -- Regina Jones
+        {"placeholder_playing_for_keeps",   "LocKey#0", "Contrat : Playing for Keeps"},
+        {"placeholder_scrolls_before_swine","LocKey#0", "Contrat : Scrolls Before Swine"},
+        {"placeholder_last_call",           "LocKey#0", "Contrat : Last Call"},
+        -- Sebastian "Padre" Ibarra - reward
+        {"placeholder_god_bless_this_mess", "LocKey#0", "Contrat : God Bless This Mess"},
+        -- Wakako Okada
+        {"placeholder_getting_warmer",      "LocKey#0", "Contrat : Getting Warmer..."},
+        {"placeholder_professional_widow",  "LocKey#0", "Contrat : Professional Widow"},
     },
     main_liberty = {
         phantom_liberty = {
@@ -363,8 +455,20 @@ local quests = {
 
         },
         misc = {
+            {"wst_ep1_04", "LocKey#91213", "Addicted To Chaos"},
+            {"mq301", "LocKey#91213", "Balls to the Wall"},
+            {"sts_ep1_12_pickup", "LocKey#91213", "Corpo of the Month"},
+            {"wst_ep1_08", "LocKey#91213", "Money For Nothing"},
+            {"q304_car_retrieval", "LocKey#91213", "Moving Heat"},
+            {"wst_ep1_11_bill_meeting", "LocKey#91213", "New Person, Same Old Mistakes"},
+            {"mq306", "LocKey#91213", "No Easy Way Out"},
+            {"wst_ep1_09", "LocKey#91213", "One Way or Another"},
+            {"sts_ep1_08_steven_meeting_night_city", "LocKey#91213", "The Show Must Go On"},
+            {"q305_postcontent", "LocKey#91213", "This Corrosion"},
+            --fact à vérifier
             {"mq033_ep1", "LocKey#91213", "Tomorrow Never Knows"},
-            {"mq306_dumpster", "LocKey#87240", "No Easy Way Out"},
+
+            {"q304_splinter_stash", "LocKey#91213", "Voodoo Treasure"},
         },
     },
     side_liberty = {
@@ -378,6 +482,9 @@ local quests = {
         {"sts_ep1_06", "LocKey#84218", "Contrat : Le Cœur lourd"},
         {"sts_ep1_07", "LocKey#78669", "Contrat : Les voies de la rédemption"},
         {"sts_ep1_10", "LocKey#78807", "Contrat : En attendant Dodger"},
+
+        -- Mr. Hands (Phantom Liberty) - reward, placeholder à compléter
+        {"placeholder_hi_ho_silver_lining", "LocKey#0", "Contrat : Hi Ho Silver Lining"},
     },
 }
 
